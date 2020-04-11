@@ -6,33 +6,19 @@ let learnNumber = () => {
 
     console.log(xNumber);
 
-        let userNumber = +prompt('Угадай число от 1 до 100');
+        let userNumber = prompt('Угадай число от 1 до 100');
 
-        console.log(Boolean(userNumber));
+        console.log(typeof(userNumber));
+        console.log('cruu ' + userNumber);
+        console.log('boolean ' +  Boolean(userNumber));
 
-        if (userNumber === false) {
-            confirm('Вы угадали число! Хотите сыграть ещё?');
-        } 
-
-        if ( userNumber < xNumber) {
-            confirm('Ваше число меньше');
-            return learnNumber();
-        } else if (userNumber === xNumber) {
-            confirm('Поздравляем Вы угадали число');
+        if (userNumber > xNumber) {
+            confirm('Загаданное число меньше');
+            
+        } else {
+             confirm('Загаданное число больше');
+                 
         }
-
-        if ( userNumber > xNumber) {
-            confirm('Ваше число больше');
-            return learnNumber();
-        } else if (userNumber === xNumber) {
-            confirm('Поздравляем Вы угадали число');
-        } 
-
-        if ( Number.isNaN(parseFloat(userNumber))) {
-            confirm('Введите число');
-            return learnNumber();
-        } 
-
-
+         
 };
 learnNumber();
