@@ -1,9 +1,12 @@
 "use strict";
+  
+let yNumber = () => {
+    let xNumber = Math.floor(Math.random() * 100 + 1);
+
+     console.log(xNumber);
 
 let guessNumber = () => {
      
-    let xNumber = Math.floor(Math.random() * 100 + 1); //Рондомное число
-    
     let userNumber = +prompt('Угадай число от 1 до 100');//число которое вводит прользователь.
 
     let win; //Число угадано
@@ -27,11 +30,11 @@ let guessNumber = () => {
     }
 
     if (win === true){
-        return guessNumber();
+        return yNumber();
     } else {
         alert('Игра закончена');
     }
-
 };
-
 guessNumber();
+};
+yNumber();
